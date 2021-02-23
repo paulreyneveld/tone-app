@@ -1,19 +1,24 @@
 import './App.css';
-import * as Tone from 'tone';
-
-
-const playC4 = () => {
-  //create a synth and connect it to the main output (your speakers)
-  const synth = new Tone.Synth().toDestination();
-
-  //play a middle 'C' for the duration of an 8th note
-  synth.triggerAttackRelease("C4", "8n");
-}
+import { 
+  playC4,
+  playDb4,
+  playD4,
+  playEb4,
+  playE4,
+  playF4,
+  playGb4,
+  playG4,
+  playAb4,
+  playA4,
+  playBb4,
+  playB4,
+  playC5      
+} from './tone.fn'
 
 const App = () => {
   return (
     <div>
-      <button onclick={playC4}>Play C4</button>
+      <button onClick={playC4}>Play C4</button>
     </div>
   );
 }
